@@ -4,7 +4,7 @@ services:
     name: admorph-backend
     env: docker
     dockerContext: backend
-    dockerfilePath: Dockerfile
+    dockerfilePath: backend/Dockerfile
     plan: free
     region: singapore # Change to your preferred region
     healthCheckPath: /api/status
@@ -33,7 +33,7 @@ services:
     name: admorph-frontend
     env: docker
     dockerContext: frontend
-    dockerfilePath: Dockerfile
+    dockerfilePath: frontend/Dockerfile
     plan: free
     region: singapore
     envVars:
