@@ -13,7 +13,7 @@
 
 AdMorph eliminates the friction between a marketing ad and its destination. When a user clicks an ad for a "sleek dark-mode server," but lands on a "generic white-label light-mode" page, conversions drop.
 
-AdMorph uses **Gemini Vision** to extract the "Visual DNA" of your ad (colors, mood, typography) and non-destructively personalizes your landing page to match—generating headlines, CTAs, and CSS overrides that ensure a perfect message match.
+AdMorph uses **Gemini Vision** to extract the "Visual DNA" of your ad (colors, mood, typography) and non-destructively personalizes your landing page to match-generating headlines, CTAs, and CSS overrides that ensure a perfect message match.
 
 ---
 
@@ -109,4 +109,4 @@ MIT License - Full details in [LICENSE](LICENSE) (if applicable).
 
 ---
 
-> Built with ✦ by [Your Name/Team]
+> Built with ✦ by Anshuk Jirli
