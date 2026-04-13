@@ -1,0 +1,46 @@
+services:
+  # ── Backend: FastAPI ──────────────────────────────────────────────────────
+  - type: web
+    name: admorph-backend
+    env: docker
+    dockerContext: .
+    dockerfilePath: backend/Dockerfile
+    plan: free
+    region: singapore # Change to your preferred region
+    healthCheckPath: /api/status
+    envVars:
+      - key: GOOGLE_API_KEY
+        sync: false # Set in Render Dashboard
+      - key: JWT_SECRET
+        generateValue: true # Generates a random 32-char hex string automatically
+      - key: ALLOWED_ORIGINS
+        fromService:
+          type: web
+          name: admorph-frontend
+          property: host
+      - key: FRONTEND_URL
+        fromService:
+          type: web
+          name: admorph-frontend
+          property: host
+      - key: BACKEND_HOST
+        value: 0.0.0.0
+      - key: BACKEND_PORT
+        value: 8000
+
+  # ── Frontend: Next.js ─────────────────────────────────────────────────────
+  - type: web
+    name: admorph-frontend
+    env: docker
+    dockerContext: .
+    dockerfilePath: frontend/Dockerfile
+    plan: free
+    region: singapore
+    envVars:
+      - key: NEXT_PUBLIC_BACKEND_URL
+        fromService:
+          type: web
+          name: admorph-backend
+          property: host
+      - key: NODE_ENV
+        value: production

@@ -1,0 +1,44 @@
+version: "3.9"
+
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: admorph-backend
+    restart: unless-stopped
+    env_file: .env
+    environment:
+      - ALLOWED_ORIGINS=http://localhost:3000
+    ports:
+      - "8000:8000"
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/api/status"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+    networks:
+      - admorph-net
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+      args:
+        # Browser talks directly to exposed port 8000 - no Docker DNS needed
+        NEXT_PUBLIC_BACKEND_URL: http://localhost:8000
+    container_name: admorph-frontend
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    depends_on:
+      backend:
+        condition: service_healthy
+    environment:
+      - NODE_ENV=production
+    networks:
+      - admorph-net
+
+networks:
+  admorph-net:
+    driver: bridge
