@@ -30,6 +30,7 @@ AdMorph uses **Gemini Vision** to extract the "Visual DNA" of your ad (colors, m
 ## 🚀 Live Demo
 
 **Frontend**: [https://admorph-frontend.onrender.com](https://admorph-frontend.onrender.com)  
+**API Docs**: [https://admorph-backend.onrender.com/docs](https://admorph-backend.onrender.com/docs)  
 **API Status**: [https://admorph-backend.onrender.com/api/status](https://admorph-backend.onrender.com/api/status)
 
 ---
