@@ -1,4 +1,4 @@
-# AdMorph ✦ 
+# AdMorph
 
 > **Close the Message-Match Gap.** AI-driven landing page personalization that aligns your brand’s visual DNA with every ad click, in seconds.
 
@@ -9,7 +9,7 @@
 
 ---
 
-## 🎯 What is AdMorph?
+## What is AdMorph?
 
 AdMorph eliminates the friction between a marketing ad and its destination. When a user clicks an ad for a "sleek dark-mode server," but lands on a "generic white-label light-mode" page, conversions drop.
 
@@ -17,17 +17,17 @@ AdMorph uses **Gemini Vision** to extract the "Visual DNA" of your ad (colors, m
 
 ---
 
-## ✨ Features
+## Features
 
-- 🧠 **Aesthetic Intelligence (Level 2)**: Extracts brand mood, primary colors, and visual "vibes" from any image ad.
-- ⚡ **High-Fidelity Support**: Optimized to handle complex, modern landing pages and ad assets up to **30MB**.
-- 🔒 **Non-Destructive Transformation**: Intelligently identifies and preserves "No-Go" zones like navigation, footers, and legal disclaimers.
-- 🛡️ **Production Hardened**: Built-in SSRF guards, stealth headers, and bot/CAPTCHA detection.
-- 📥 **Stand-alone Export**: Download your personalized variant as a single, ready-to-deploy HTML file.
+- **Aesthetic Intelligence (Level 2)**: Extracts brand mood, primary colors, and visual "vibes" from any image ad.
+- **High-Fidelity Support**: Optimized to handle complex, modern landing pages and ad assets up to **30MB**.
+- **Non-Destructive Transformation**: Intelligently identifies and preserves "No-Go" zones like navigation, footers, and legal disclaimers.
+- **Production Hardened**: Built-in SSRF guards, stealth headers, and bot/CAPTCHA detection.
+- **Stand-alone Export**: Download your personalized variant as a single, ready-to-deploy HTML file.
 
 ---
 
-## 🚀 Live Demo
+## Live Demo
 
 **Frontend**: [https://admorph-frontend.onrender.com](https://admorph-frontend.onrender.com)  
 **API Docs**: [https://admorph-backend.onrender.com/docs](https://admorph-backend.onrender.com/docs)  
@@ -35,7 +35,7 @@ AdMorph uses **Gemini Vision** to extract the "Visual DNA" of your ad (colors, m
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 | Layer | Technology |
 |-------|-----------|
@@ -47,7 +47,7 @@ AdMorph uses **Gemini Vision** to extract the "Visual DNA" of your ad (colors, m
 
 ---
 
-## 🏗️ System Architecture
+## System Architecture
 
 ```mermaid
 graph TD
@@ -64,7 +64,7 @@ graph TD
 
 ---
 
-## 📦 Deployment (Render Blueprint)
+## Deployment (Render Blueprint)
 
 AdMorph is designed for zero-config deployment via **Render Blueprints**.
 
@@ -77,7 +77,7 @@ AdMorph is designed for zero-config deployment via **Render Blueprints**.
 
 ---
 
-## 🔧 Local Development
+## Local Development
 
 ### 1. Configure
 ```bash
@@ -104,7 +104,7 @@ npm run dev
 
 ---
 
-## 📜 License
+## License
 
 MIT License - Full details in [LICENSE](LICENSE) (if applicable).
 
