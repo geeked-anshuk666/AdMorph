@@ -14,15 +14,9 @@ services:
       - key: JWT_SECRET
         generateValue: true # Generates a random 32-char hex string automatically
       - key: ALLOWED_ORIGINS
-        fromService:
-          type: web
-          name: admorph-frontend
-          property: host
+        value: https://admorph-frontend.onrender.com
       - key: FRONTEND_URL
-        fromService:
-          type: web
-          name: admorph-frontend
-          property: host
+        value: https://admorph-frontend.onrender.com
       - key: BACKEND_HOST
         value: 0.0.0.0
       - key: BACKEND_PORT
