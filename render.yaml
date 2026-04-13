@@ -38,9 +38,6 @@ services:
     region: singapore
     envVars:
       - key: NEXT_PUBLIC_BACKEND_URL
-        fromService:
-          type: web
-          name: admorph-backend
-          property: host
+        value: https://admorph-backend.onrender.com
       - key: NODE_ENV
         value: production

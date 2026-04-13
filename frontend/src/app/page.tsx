@@ -8,7 +8,12 @@ import Preview from "@/components/Preview";
 import ChangePanel from "@/components/ChangePanel";
 import HealthModal from "@/components/HealthModal";
 
-const BACKEND = process.env.NEXT_PUBLIC_BACKEND_URL ?? "http://localhost:8000";
+let BACKEND = process.env.NEXT_PUBLIC_BACKEND_URL ?? "http://localhost:8000";
+// Fix for Render Blueprint "Relative URL" bug: 
+// If the backend URL doesn't have a protocol, assume it's a Render host
+if (BACKEND && !BACKEND.startsWith("http")) {
+  BACKEND = `https://${BACKEND}.onrender.com`;
+}
 const CLIENT_ID = "admorph-web-client";
 const POLL_MS = 2500;
 
@@ -260,7 +265,7 @@ export default function HomePage() {
         <div className="hero-inner">
           <div className="hero-badge animate-fade-in">
             <span className="hero-badge-dot" aria-hidden="true" />
-            Powered by Gemini 3.1 Pro
+            Powered by Gemini
           </div>
           <h1 className="hero-title animate-fade-up">
             Make your landing page<br />
